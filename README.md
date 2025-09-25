@@ -39,11 +39,11 @@ Highlight differences in approach, strengths, and limitations of each AI tool.
 
 # Sample Python Code:
 
-# Import libraries
+#Import libraries
 import requests
 import json
 
-# Example: OpenAI API interaction
+#Example: OpenAI API interaction
 def get_openai_response(prompt):
     url = "https://api.openai.com/v1/chat/completions"
     headers = {
@@ -58,7 +58,7 @@ def get_openai_response(prompt):
     response = requests.post(url, headers=headers, json=data)
     return response.json()["choices"][0]["message"]["content"]
 
-# Example: Cohere API interaction
+#Example: Cohere API interaction
 def get_cohere_response(prompt):
     url = "https://api.cohere.ai/generate"
     headers = {
@@ -73,10 +73,10 @@ def get_cohere_response(prompt):
     response = requests.post(url, headers=headers, json=data)
     return response.json()["generations"][0]["text"]
 
-# Example prompts
+#Example prompts
 prompt = "Generate a Python function to calculate factorial of a number."
 
-# Get responses from both AI tools
+#Get responses from both AI tools
 openai_output = get_openai_response(prompt)
 cohere_output = get_cohere_response(prompt)
 
